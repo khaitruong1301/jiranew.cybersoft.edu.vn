@@ -13,6 +13,13 @@ using Microsoft.Net.Http.Headers;
 using ApiBase.Service.ViewModels.ProjectViewModel;
 using ApiBase.Service.ViewModels.Task;
 using bookingticketAPI.Filter;
+using ApiBase.Service.Constants;
+using ApiBase.Service.ViewModels;
+using Microsoft.CodeAnalysis;
+using Newtonsoft.Json.Linq;
+using ApiBase.Service.Services.UserService;
+using ApiBase.Repository.Repository;
+using Project = ApiBase.Repository.Models.Project;
 
 namespace ApiBase.Api.Controllers
 {
@@ -22,9 +29,13 @@ namespace ApiBase.Api.Controllers
     public class ProjectController : ControllerBase
     {
         IProjectService _projectService;
-        public ProjectController(IProjectService projectService )
+        IUserService _userService;
+        IProjectRepository _projectRepository;
+        public ProjectController(IProjectService projectService ,IUserService userService, IProjectRepository projectRepository)
         {
             _projectService = projectService;
+            _userService = userService;
+            _projectRepository = projectRepository;
         }
 
 
@@ -61,24 +72,39 @@ namespace ApiBase.Api.Controllers
         }
 
 
-        //[Authorize]
-        //[HttpDelete("deleteProject")]
-        //public async Task<IActionResult> deleteProject(int projectId)
-        //{
-        //    List<dynamic> lstId = new List<dynamic>();
-        //    lstId.Add(projectId);
-        //    return await _projectService.DeleteByIdAsync(lstId);
-        //}
+        [Authorize]
+        [HttpDelete("deleteProject")]
+        public async Task<IActionResult> deleteProject(int projectId)
+        {
+            var accessToken = Request.Headers[HeaderNames.Authorization];
+
+            List<dynamic> lstId = new List<dynamic>();
+            lstId.Add(projectId);
+            UserJira user = _userService.getUserByToken(accessToken).Result;
+            Project project = _projectRepository.GetSingleByIdAsync(projectId).Result;
+
+            if (project == null)
+            {
+                return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Project is not found", MessageConstants.MESSAGE_ERROR_404);
+
+            }
+            if (project.creator != user.id)
+            {
+                return new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Project không phải của bạn đâu đừng delete, nhiều bạn phàn nàn lắm đó !", MessageConstants.MESSAGE_ERROR_404);
+
+            }
+            return await _projectService.DeleteByIdAsync(lstId);
+        }
 
 
-        //[Authorize]
-        //[HttpPut("updateProject")]
-        //public async Task<IActionResult> updateProject(int? projectId, ProjectUpdate projectUpdate)
-        //{
-        //    var accessToken = Request.Headers[HeaderNames.Authorization];
+        [Authorize]
+        [HttpPut("updateProject")]
+        public async Task<IActionResult> updateProject(int? projectId, ProjectUpdate projectUpdate)
+        {
+            var accessToken = Request.Headers[HeaderNames.Authorization];
 
-        //    return await _projectService.updateProject(projectId,projectUpdate, accessToken);
-        //}
+            return await _projectService.updateProject(projectId, projectUpdate, accessToken);
+        }
 
         [Authorize]
         [HttpPost("assignUserProject")]

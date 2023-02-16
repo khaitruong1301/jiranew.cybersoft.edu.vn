@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -332,6 +333,12 @@ namespace ApiBase.Service.Services.PriorityService
             if (project == null)
             {
                 return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Project is not found", MessageConstants.MESSAGE_ERROR_404);
+
+            }
+            UserJira user = _userService.getUserByToken(token).Result;
+            if (project.creator != user.id)
+            {
+                return new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Project không phải của bạn đâu đừng update, nhiều bạn phàn nàn lắm đó !", MessageConstants.MESSAGE_ERROR_404);
 
             }
             project.alias = FuncUtilities.BestLower(projectUpdate.projectName);
@@ -787,16 +794,17 @@ namespace ApiBase.Service.Services.PriorityService
         {
             UserJira user = _userService.getUserByToken(token).Result;
             Project pro = _projectRepository.GetSingleByConditionAsync("id", model.projectId).Result;
-            Repository.Models.Task taskModel = _taskRepository.GetSingleByConditionAsync("taskId", model.taskId).Result;
-            if (taskModel == null)
-            {
-                return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Task is not found!", MessageConstants.MESSAGE_ERROR_404);
-            }
             if (pro == null)
             {
                 return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Project is not found!", MessageConstants.MESSAGE_ERROR_404);
 
             }
+            Repository.Models.Task taskModel = _taskRepository.GetSingleByConditionAsync("taskId", model.taskId).Result;
+            if (taskModel == null)
+            {
+                return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Task is not found!", MessageConstants.MESSAGE_ERROR_404);
+            }
+           
             if (pro.creator != user.id)
             {
                 return new ResponseEntity(StatusCodeConstants.FORBIDDEN, "User is unthorization!", MessageConstants.MESSAGE_ERROR_403);
