@@ -103,6 +103,22 @@ namespace ApiBase.Api.Controllers
         {
             var accessToken = Request.Headers[HeaderNames.Authorization];
 
+            List<dynamic> lstId = new List<dynamic>();
+            lstId.Add(projectId);
+            UserJira user = _userService.getUserByToken(accessToken).Result;
+            Project project = _projectRepository.GetSingleByIdAsync(projectId).Result;
+
+            if (project == null)
+            {
+                return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Project is not found", MessageConstants.MESSAGE_ERROR_404);
+
+            }
+            if (project.creator != user.id)
+            {
+                return new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Project không phải của bạn đâu đừng yodate, nhiều bạn phàn nàn lắm đó !", MessageConstants.MESSAGE_ERROR_404);
+
+            }
+
             return await _projectService.updateProject(projectId, projectUpdate, accessToken);
         }
 
