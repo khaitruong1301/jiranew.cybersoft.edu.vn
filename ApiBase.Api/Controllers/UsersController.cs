@@ -78,11 +78,11 @@ namespace ApiBase.Api.Controllers
             return await _userService.SignIn(model);
         }
 
-        //[HttpPost("signup")]
-        //public async Task<IActionResult> SignUp([FromBody] InfoUser model)
-        //{
-        //    return await _userService.SignUpAsync(model);
-        //}
+        [HttpPost("signup")]
+        public async Task<IActionResult> SignUp([FromBody] InfoUser model)
+        {
+            return await _userService.SignUpAsync(model);
+        }
 
 
         //[HttpPost("signin")]
