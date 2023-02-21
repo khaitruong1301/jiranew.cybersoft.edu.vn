@@ -30,11 +30,11 @@ namespace ApiBase.Api.Controllers
         }
 
 
-        //[HttpPost("signup")]
-        //public async Task<IActionResult> SignUp([FromBody] UserJiraModel model)
-        //{
-        //    return await _userService.RegisterUser(model);
-        //}
+        [HttpPost("signup")]
+        public async Task<IActionResult> SignUp([FromBody] UserJiraModel model)
+        {
+            return await _userService.RegisterUser(model);
+        }
 
 
         [HttpPut("editUser")]
