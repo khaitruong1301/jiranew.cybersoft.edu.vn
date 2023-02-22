@@ -20,31 +20,31 @@ namespace bookingticketAPI.Filter
 
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-            try
-            {
+            //try
+            //{
 
-                var accessToken = filterContext.HttpContext.Request.Headers["TokenCybersoft"];
-                JwtSecurityToken token = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
-                string hetHanTime = token.Claims.FirstOrDefault(c => c.Type == "HetHanString").Value;
+            //    var accessToken = filterContext.HttpContext.Request.Headers["TokenCybersoft"];
+            //    JwtSecurityToken token = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
+            //    string hetHanTime = token.Claims.FirstOrDefault(c => c.Type == "HetHanString" ).Value;
 
-                if (DateTimes.ConvertDate(hetHanTime) <= DateTime.Now)
-                {
+            //    if (DateTimes.ConvertDate(hetHanTime) <= DateTime.Now)
+            //    {
                   
 
-                    filterContext.HttpContext.Response.Headers.Add("authToken", accessToken);
-                    filterContext.HttpContext.Response.Headers.Add("AuthStatus", "NotAuthorized");
+            //        filterContext.HttpContext.Response.Headers.Add("authToken", accessToken);
+            //        filterContext.HttpContext.Response.Headers.Add("AuthStatus", "NotAuthorized");
 
-                    filterContext.HttpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
-                    filterContext.HttpContext.Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "Not Authorized";
-                    filterContext.Result = new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Token không cybersoft không hợp lệ hoặc đã hết hạn truy cập !", MessageConstant.MESSAGE_ERROR_403);
+            //        filterContext.HttpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
+            //        filterContext.HttpContext.Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "Not Authorized";
+            //        filterContext.Result = new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Token không cybersoft không hợp lệ hoặc đã hết hạn truy cập !", MessageConstant.MESSAGE_ERROR_403);
 
 
-                }
+            //    }
 
-            }catch (Exception ex)
-            {
-                filterContext.Result = new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Token không cybersoft không hợp lệ hoặc đã hết hạn truy cập !", MessageConstant.MESSAGE_ERROR_403);
-            }
+            //}catch (Exception ex)
+            //{
+            //    filterContext.Result = new ResponseEntity(StatusCodeConstants.FORBIDDEN, "Token không cybersoft không hợp lệ hoặc đã hết hạn truy cập !", MessageConstant.MESSAGE_ERROR_403);
+            //}
 
         
         }
