@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiBase.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b9b533358d669ea318517cbe71d9c8d9b9f3f56")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiBase.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiBase.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

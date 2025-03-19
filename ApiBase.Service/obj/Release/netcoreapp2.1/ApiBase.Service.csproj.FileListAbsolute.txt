@@ -47,3 +47,17 @@ C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Service\obj\
 C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.csproj.CopyComplete
 C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.dll
 C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.pdb
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\bin\Release\netcoreapp2.1\ApiBase.Service.deps.json
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\bin\Release\netcoreapp2.1\ApiBase.Service.dll
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\bin\Release\netcoreapp2.1\ApiBase.Service.pdb
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\bin\Release\netcoreapp2.1\ApiBase.Repository.dll
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\bin\Release\netcoreapp2.1\ApiBase.Repository.pdb
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.csproj.AssemblyReference.cache
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.AssemblyInfoInputs.cache
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.AssemblyInfo.cs
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.csproj.CoreCompileInputs.cache
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.sourcelink.json
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.csproj.CopyComplete
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.dll
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Service\obj\Release\netcoreapp2.1\ApiBase.Service.pdb

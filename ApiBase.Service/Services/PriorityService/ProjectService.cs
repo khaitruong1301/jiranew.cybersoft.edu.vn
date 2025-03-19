@@ -593,8 +593,8 @@ namespace ApiBase.Service.Services.PriorityService
 
             }
             Task_User taskUserInsert = new Task_User();
-            taskUserInsert.userId = model.taskId;
-            taskUserInsert.taskId = model.userId;
+            taskUserInsert.userId = model.userId;
+            taskUserInsert.taskId = model.taskId;
             await _taskUserRepository.InsertAsync(taskUserInsert);
             return new ResponseEntity(StatusCodeConstants.OK, "add user to task successfully!", MessageConstants.UPDATE_SUCCESS);
         }

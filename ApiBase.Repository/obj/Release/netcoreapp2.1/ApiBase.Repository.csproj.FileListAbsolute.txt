@@ -35,3 +35,14 @@ C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Repository\o
 C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.csproj.CoreCompileInputs.cache
 C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.dll
 C:\Users\khaitruong\Desktop\cybersoft\jira.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.pdb
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\bin\Release\netcoreapp2.1\ApiBase.Repository.deps.json
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\bin\Release\netcoreapp2.1\ApiBase.Repository.dll
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\bin\Release\netcoreapp2.1\ApiBase.Repository.pdb
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.csproj.AssemblyReference.cache
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.AssemblyInfoInputs.cache
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.AssemblyInfo.cs
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.csproj.CoreCompileInputs.cache
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.sourcelink.json
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.dll
+D:\cyber\Dotnet03\DEMO\jiranew.cybersoft.edu.vn\ApiBase.Repository\obj\Release\netcoreapp2.1\ApiBase.Repository.pdb
